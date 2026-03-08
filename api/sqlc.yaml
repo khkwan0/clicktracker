@@ -1,0 +1,12 @@
+version: "2"
+sql:
+  - schema: "db/migrations"   # Directory for your .sql schema files
+    queries: "db/queries"     # Directory for your .sql query files
+    engine: "postgresql"      # Or "mysql" / "sqlite"
+    gen:
+      go:
+        package: "database"   # The Go package name
+        out: "internal/database" # Where the .go files will be saved
+        sql_package: "pgx/v5" # Modern driver choice (standard is "database/sql")
+        emit_json_tags: true  # Automatically adds `json:"field_name"` to structs
+        emit_interface: true  # Generates a 'Querier' interface for easier mocking

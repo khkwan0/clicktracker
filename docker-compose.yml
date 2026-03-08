@@ -1,0 +1,61 @@
+services:
+  web:
+    restart: always
+    user: '1000:1000'
+    build: ./web
+    ports:
+      - 33128:3000
+    env_file:
+      - ./web/.env
+    volumes:
+      - ./web:/usr/src/app
+      - ./assets:/usr/src/app/assets
+      - ./api_logs:/usr/src/app/logs
+    networks:
+      - internal_clicktracker_net
+  api:
+    restart: always
+    build: ./api
+    ports:
+      - 33124:80
+    env_file:
+      - ./api/.env
+    volumes:
+#      - ./api:/usr/src/app
+      - ./assets:/usr/src/app/assets
+      - ./api_logs:/usr/src/app/logs
+    networks:
+      - internal_clicktracker_net
+  redis:
+    restart: always
+    image: redis/redis-stack
+    volumes:
+      - ./redis:/data
+    networks:
+      - internal_clicktracker_net
+  postgres:
+    user: '1000:1000'
+    restart: always
+    image: postgres:latest
+    volumes:
+      - ./postgres_data:/var/lib/postgresql/18/docker
+    env_file:
+      - ./web/.env
+    networks:
+      - internal_clicktracker_net
+  pgadmin:
+    restart: always
+    image: dpage/pgadmin4:latest
+    env_file:
+      - ./web/.env
+    ports:
+      - "192.168.6.103:33126:443"
+      - "192.168.6.103:33125:80"
+    volumes:
+      - ./pgadmin:/var/lib/pgadmin
+    networks:
+      - internal_clicktracker_net
+
+networks:
+  internal_clicktracker_net:
+    driver: bridge
