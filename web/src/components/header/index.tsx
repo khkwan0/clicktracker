@@ -29,7 +29,31 @@ export function Header({session}: HeaderProps) {
             className="min-w-0 truncate text-lg font-semibold text-foreground no-underline hover:opacity-80 sm:text-xl">
             {t('name')}
           </Link>
-          <div className="flex items-center gap-2">
+          <nav className="flex items-center gap-4">
+            {!session?.user?.email && (
+              <>
+                <Link
+                  href="/terms"
+                  className="text-sm text-foreground/80 underline-offset-4 hover:text-foreground">
+                  {t('navTerms')}
+                </Link>
+                <Link
+                  href="/privacy"
+                  className="text-sm text-foreground/80 underline-offset-4 hover:text-foreground">
+                  {t('navPrivacy')}
+                </Link>
+                <Link
+                  href="/about"
+                  className="text-sm text-foreground/80 underline-offset-4 hover:text-foreground">
+                  {t('navAbout')}
+                </Link>
+                <Link
+                  href="/contact"
+                  className="text-sm text-foreground/80 underline-offset-4 hover:text-foreground">
+                  {t('navContact')}
+                </Link>
+              </>
+            )}
             <ThemeToggle />
             <LanguageSwitcher />
             {session?.user?.email && (
@@ -44,7 +68,7 @@ export function Header({session}: HeaderProps) {
                 </a>
               </div>
             )}
-          </div>
+          </nav>
         </div>
       </div>
     </header>
