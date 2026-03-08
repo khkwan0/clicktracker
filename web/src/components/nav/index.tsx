@@ -2,7 +2,7 @@
 
 import {useTranslations} from 'next-intl'
 import {Link, usePathname} from '@/i18n/navigation'
-import {hasAnyRole, hasRole, ROLE} from '@/lib/roles'
+import {hasAnyRole, hasRole, ROLE} from '@/lib/role-utils'
 import type {Session} from 'next-auth'
 
 type NavProps = {
@@ -34,17 +34,19 @@ export function Nav({session}: NavProps) {
     }`
 
   return (
-    <nav
-      className="flex flex-wrap items-center gap-1 border-t border-foreground/10 bg-background/50 px-4 py-2 sm:px-6"
-      aria-label={t('navLabel')}>
-      <Link href={dashboardPath} className={linkClass(dashboardPath)}>
-        {t('navDashboard')}
-      </Link>
-      {showCampaigns && (
-        <Link href="/adv/campaigns" className={linkClass('/adv/campaigns')}>
-          {t('navCampaigns')}
+    <div className="border-t border-foreground/10 bg-background/50">
+      <nav
+        className="mx-auto flex w-full max-w-[var(--header-max-width,80rem)] flex-wrap items-center gap-1 px-4 py-2 sm:px-6"
+        aria-label={t('navLabel')}>
+        <Link href={dashboardPath} className={linkClass(dashboardPath)}>
+          {t('navDashboard')}
         </Link>
-      )}
-    </nav>
+        {showCampaigns && (
+          <Link href="/adv/campaigns" className={linkClass('/adv/campaigns')}>
+            {t('navCampaigns')}
+          </Link>
+        )}
+      </nav>
+    </div>
   )
 }

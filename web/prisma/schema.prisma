@@ -22,6 +22,8 @@ model User {
   advertisers   Advertiser[]
   campaigns     Campaign[]
   preferences   preferences[]
+  afiliates     Affiliate[]
+  clicks        Click[]
 
 
   createdAt DateTime @default(now())
@@ -79,6 +81,7 @@ model VerificationToken {
 model preferences {
   id          Int      @id @default(autoincrement())
   user_id     String
+  user        User     @relation(fields:[user_id], references:[id])
   language    String   @default("en") @db.VarChar(255)
   preferences Json     @default("{}")
   created_at  DateTime @default(now()) @db.Timestamp(6)
@@ -89,7 +92,7 @@ model telegram {
   id         Int      @id @default(autoincrement())
   tg_id      Int
   user_id    String
-  user       User     @relation(fields: [user_id], references: [id], onDelete: Cascade)
+  user       User     @relation(fields: [user_id], references: [id])
   prices_ttl Int      @default(300)
   token      String?  @db.VarChar(255)
   created_at DateTime @default(now()) @db.Timestamptz(6)
@@ -97,29 +100,50 @@ model telegram {
 }
 
 model Advertiser {
-  id         Int      @id @default(autoincrement())
+  id         String          @id @default(cuid())
+  userId     String
   name       String 
+  user       User            @relation(fields:[userId], references:[id])
+  clicks        Click[]
   campaigns  Campaign[]
-  created_at DateTime @default(now()) @db.Timestamptz(6)
-  updated_at DateTime @updatedAt
+  created_at DateTime        @default(now()) @db.Timestamptz(6)
+  updated_at DateTime        @updatedAt
 }
 
 model Campaign {
-  id            Int          @id @default(autoincrement())
+  id            String      @id @default(cuid())
   name          String
-  advertiserId  Int
+  userId        String
+  advertiserId  String
   clickUrl      String?
   clickTag      String?
-  advertiser    Advertisers  @relation(fields:[advertiserId], references[id])
+  clicks        Click[]
+  user          User         @relation(fields:[userId], references:[id])
+  advertiser    Advertiser   @relation(fields:[advertiserId], references:[id])
   created_at    DateTime     @default(now()) @db.Timestamptz(6)
   updated_at    DateTime     @updatedAt
 }
 
-model Clicks {
+model Affiliate {
+  id            String       @id @default(cuid())
+  name          String
+  userId        String
+  user          User         @relation(fields:[userId], references:[id])
+  clicks        Click[]
+  created_at    DateTime     @default(now()) @db.Timestamptz(6)
+  updated_at    DateTime     @updatedAt
+}
+
+model Click {
   id            Int          @id @default(autoincrement())
-  advertiserId  Int
-  campaignId    Int
-  affID         Int
+  advertiserId  String
+  campaignId    String
+  affiliateId   String
+  userId        String
+  affilitate    Affiliate    @relation(fields:[affiliateId], references:[id])
+  advertiser    Advertiser   @relation(fields:[advertiserId], references:[id])
+  campaign      Campaign     @relation(fields:[campaignId], references:[id])
+  user          User         @relation(fields:[userId], references:[id])
   created_at    DateTime     @default(now()) @db.Timestamptz(6)
   updated_at    DateTime     @updatedAt
 }
