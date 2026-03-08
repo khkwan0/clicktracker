@@ -2,9 +2,18 @@
   "App": {
     "name": "ClickTracker",
     "themeSwitchToLight": "切换到浅色主题",
-    "themeSwitchToDark": "切换到深色主题"
+    "themeSwitchToDark": "切换到深色主题",
+    "logout": "退出登录"
   },
   "HomePage": {
-    "title": "首页"
+    "title": "首页",
+    "signIn": "登录",
+    "welcomeTitle": "联盟营销，化繁为简",
+    "welcomeSubtitle": "管理广告活动、追踪效果、与合作伙伴共同成长—一站式完成。",
+    "joinAsAdvertiser": "我是广告主",
+    "joinAsAdvertiserDescription": "投放广告并按效果付费。添加广告活动、审核联盟客、追踪转化。",
+    "joinAsAffiliate": "我是联盟客",
+    "joinAsAffiliateDescription": "推广广告活动并赚取收益。申请项目、获取链接，从您带来的流量中获得报酬。",
+    "signInWithGoogle": "使用 Google 继续"
   }
 }

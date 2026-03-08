@@ -1,6 +1,8 @@
 import createMiddleware from 'next-intl/middleware'
 import {NextRequest, NextResponse} from 'next/server'
 import {logger, nextRequestId} from '@/lib/logger'
+import {hasRole, ROLE} from '@/lib/roles'
+import {auth} from '@/auth'
 
 const i18nMiddleware = createMiddleware({
   locales: [
@@ -23,7 +25,6 @@ const i18nMiddleware = createMiddleware({
 export default async function middleware(request: NextRequest) {
   const pathname = request.nextUrl.pathname
 
-  /*
   // Handle API routes - authenticate user (matching Fastify's preHandler hook)
   if (pathname.startsWith('/api/')) {
     // Skip NextAuth routes - they need to handle cookies directly
@@ -51,20 +52,9 @@ export default async function middleware(request: NextRequest) {
     )
 
     if (pathname.startsWith('/api/admin/')) {
-      const session = await getServerSession(authConfig)
-      const user = await getUserFromRequest(request)
-      if (session?.user?.role_id === 9 || user?.user?.isAdmin) {
-        const response = NextResponse.next()
-        logger.info(JSON.stringify(response))
-        logger.info(
-          {
-            reqId: requestId,
-            res: {statusCode: response.status},
-            responseTime: Number(process.hrtime.bigint() - startTime) / 1000000,
-          },
-          'request completed',
-        )
-        return response
+      const session = await auth()
+      if (hasRole(session?.user?.role, ROLE.ADMIN)) {
+        return NextResponse.next()
       } else {
         logger.info(
           {
@@ -89,7 +79,6 @@ export default async function middleware(request: NextRequest) {
     response.headers.set('x-request-id', requestId)
     return response
   }
-  */
 
   // Check if this is a static file request
   const isStaticFile =

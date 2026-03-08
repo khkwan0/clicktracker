@@ -2,9 +2,18 @@
   "App": {
     "name": "ClickTracker",
     "themeSwitchToLight": "Schakel naar licht thema",
-    "themeSwitchToDark": "Schakel naar donker thema"
+    "themeSwitchToDark": "Schakel naar donker thema",
+    "logout": "Uitloggen"
   },
   "HomePage": {
-    "title": "Startpagina"
+    "title": "Startpagina",
+    "signIn": "Inloggen",
+    "welcomeTitle": "Affiliate netwerk, vereenvoudigd",
+    "welcomeSubtitle": "Beheer campagnes, volg prestaties en groei met partners—alles op één plek.",
+    "joinAsAdvertiser": "Ik ben adverteerder",
+    "joinAsAdvertiserDescription": "Voer campagnes uit en betaal op basis van prestaties. Voeg aanbiedingen toe, keur affiliates goed en volg conversies.",
+    "joinAsAffiliate": "Ik ben affiliate",
+    "joinAsAffiliateDescription": "Promoot aanbiedingen en verdien. Solliciteer op programma's, krijg links en word betaald voor het verkeer dat je brengt.",
+    "signInWithGoogle": "Doorgaan met Google"
   }
 }

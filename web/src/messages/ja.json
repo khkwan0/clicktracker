@@ -2,9 +2,18 @@
   "App": {
     "name": "ClickTracker",
     "themeSwitchToLight": "ライトテーマに切り替え",
-    "themeSwitchToDark": "ダークテーマに切り替え"
+    "themeSwitchToDark": "ダークテーマに切り替え",
+    "logout": "ログアウト"
   },
   "HomePage": {
-    "title": "ホーム"
+    "title": "ホーム",
+    "signIn": "サインイン",
+    "welcomeTitle": "アフィリエイトネットワーク、シンプルに",
+    "welcomeSubtitle": "キャンペーン管理、パフォーマンス計測、パートナーとの成長—すべて一箇所で。",
+    "joinAsAdvertiser": "広告主として参加",
+    "joinAsAdvertiserDescription": "キャンペーンを運用し、成果に応じて支払い。オファーを追加し、アフィリエイトを承認し、コンバージョンを計測。",
+    "joinAsAffiliate": "アフィリエイトとして参加",
+    "joinAsAffiliateDescription": "オファーを宣伝して収益を得る。プログラムに応募し、リンクを取得し、誘導したトラフィックで報酬を受け取る。",
+    "signInWithGoogle": "Googleで続行"
   }
 }

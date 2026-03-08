@@ -4,6 +4,7 @@ import {notFound} from 'next/navigation'
 import {NextIntlClientProvider} from 'next-intl'
 import {Header} from '@/components/header'
 import {routing} from '@/i18n/routing'
+import {auth} from '@/auth'
 
 type Props = {
   children: React.ReactNode
@@ -17,10 +18,11 @@ export default async function LocaleLayout({children, params}: Props) {
   }
 
   const messages = await getMessages()
+  const session = await auth()
 
   return (
     <NextIntlClientProvider locale={locale} messages={messages}>
-      <Header />
+      <Header session={session} />
       {children}
     </NextIntlClientProvider>
   )

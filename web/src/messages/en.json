@@ -1,10 +1,35 @@
 {
+  "AuthPage": {
+    "title": "Sign in",
+    "subtitle": "Sign in with your account to continue.",
+    "signInWithGoogle": "Continue with Google",
+    "signInWithLine": "Continue with LINE",
+    "signInWithTikTok": "Continue with TikTok",
+    "backToHome": "Back to home"
+  },
   "App": {
     "name": "ClickTracker",
     "themeSwitchToLight": "Switch to light theme",
-    "themeSwitchToDark": "Switch to dark theme"
+    "themeSwitchToDark": "Switch to dark theme",
+    "logout": "Log out"
+  },
+  "OnboardingPage": {
+    "title": "Onboarding",
+    "question": "Are you an advertiser or an affiliate?",
+    "advertiser": "I'm an Advertiser",
+    "advertiserDescription": "Run campaigns and pay for performance.",
+    "affiliate": "I'm an Affiliate",
+    "affiliateDescription": "Promote offers and earn from the traffic you drive."
   },
   "HomePage": {
-    "title": "Home Page"
+    "title": "Home Page",
+    "signIn": "Sign in",
+    "welcomeTitle": "Affiliate network, simplified",
+    "welcomeSubtitle": "Manage campaigns, track performance, and grow with partners—all in one place.",
+    "joinAsAdvertiser": "I'm an Advertiser",
+    "joinAsAdvertiserDescription": "Run campaigns and pay for performance. Add offers, approve affiliates, and track conversions.",
+    "joinAsAffiliate": "I'm an Affiliate",
+    "joinAsAffiliateDescription": "Promote offers and earn. Apply to programs, get links, and get paid for the traffic you drive.",
+    "signInWithGoogle": "Continue with Google"
   }
 }

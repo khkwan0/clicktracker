@@ -2,9 +2,18 @@
   "App": {
     "name": "ClickTracker",
     "themeSwitchToLight": "切換至淺色主題",
-    "themeSwitchToDark": "切換至深色主題"
+    "themeSwitchToDark": "切換至深色主題",
+    "logout": "登出"
   },
   "HomePage": {
-    "title": "首頁"
+    "title": "首頁",
+    "signIn": "登入",
+    "welcomeTitle": "聯盟行銷，化繁為簡",
+    "welcomeSubtitle": "管理廣告活動、追蹤成效、與合作夥伴共同成長—一站式完成。",
+    "joinAsAdvertiser": "我是廣告主",
+    "joinAsAdvertiserDescription": "投放廣告並依成效付費。新增廣告活動、審核聯盟客、追蹤轉換。",
+    "joinAsAffiliate": "我是聯盟客",
+    "joinAsAffiliateDescription": "推廣廣告活動並賺取收益。申請計畫、取得連結，從您帶來的流量中獲得報酬。",
+    "signInWithGoogle": "使用 Google 繼續"
   }
 }

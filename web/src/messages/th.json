@@ -2,9 +2,18 @@
   "App": {
     "name": "ClickTracker",
     "themeSwitchToLight": "เปลี่ยนเป็นธีมสว่าง",
-    "themeSwitchToDark": "เปลี่ยนเป็นธีมมืด"
+    "themeSwitchToDark": "เปลี่ยนเป็นธีมมืด",
+    "logout": "ออกจากระบบ"
   },
   "HomePage": {
-    "title": "หน้าแรก"
+    "title": "หน้าแรก",
+    "signIn": "เข้าสู่ระบบ",
+    "welcomeTitle": "เครือข่ายพันธมิตร สร้างให้ง่าย",
+    "welcomeSubtitle": "จัดการแคมเปญ ติดตามผลงาน และเติบโตกับพาร์ทเนอร์—ทั้งหมดในที่เดียว",
+    "joinAsAdvertiser": "ฉันเป็นผู้โฆษณา",
+    "joinAsAdvertiserDescription": "รันแคมเปญและจ่ายตามผลงาน เพิ่มโอเฟอร์ อนุมัติพันธมิตร และติดตามการแปลง",
+    "joinAsAffiliate": "ฉันเป็นพันธมิตร",
+    "joinAsAffiliateDescription": "โปรโมทโอเฟอร์และรับรายได้ สมัครโปรแกรม รับลิงก์ และรับค่าตอบแทนจากทราฟฟิกที่คุณนำมา",
+    "signInWithGoogle": "ดำเนินการต่อด้วย Google"
   }
 }

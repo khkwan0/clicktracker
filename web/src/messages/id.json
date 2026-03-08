@@ -2,9 +2,18 @@
   "App": {
     "name": "ClickTracker",
     "themeSwitchToLight": "Beralih ke tema terang",
-    "themeSwitchToDark": "Beralih ke tema gelap"
+    "themeSwitchToDark": "Beralih ke tema gelap",
+    "logout": "Keluar"
   },
   "HomePage": {
-    "title": "Halaman Utama"
+    "title": "Halaman Utama",
+    "signIn": "Masuk",
+    "welcomeTitle": "Jaringan afiliasi, disederhanakan",
+    "welcomeSubtitle": "Kelola kampanye, lacak performa, dan berkembang bersama mitra—semua dalam satu tempat.",
+    "joinAsAdvertiser": "Saya Advertiser",
+    "joinAsAdvertiserDescription": "Jalankan kampanye dan bayar per performa. Tambah penawaran, setujui afiliasi, dan lacak konversi.",
+    "joinAsAffiliate": "Saya Afiliasi",
+    "joinAsAffiliateDescription": "Promosikan penawaran dan dapatkan penghasilan. Daftar ke program, dapatkan tautan, dan dibayar untuk lalu lintas yang Anda bawa.",
+    "signInWithGoogle": "Lanjutkan dengan Google"
   }
 }

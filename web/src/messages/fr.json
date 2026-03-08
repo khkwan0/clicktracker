@@ -2,9 +2,18 @@
   "App": {
     "name": "ClickTracker",
     "themeSwitchToLight": "Passer au thème clair",
-    "themeSwitchToDark": "Passer au thème sombre"
+    "themeSwitchToDark": "Passer au thème sombre",
+    "logout": "Déconnexion"
   },
   "HomePage": {
-    "title": "Page d'accueil"
+    "title": "Page d'accueil",
+    "signIn": "Se connecter",
+    "welcomeTitle": "Réseau d'affiliation, simplifié",
+    "welcomeSubtitle": "Gérez vos campagnes, suivez les performances et développez-vous avec vos partenaires—tout en un seul endroit.",
+    "joinAsAdvertiser": "Je suis annonceur",
+    "joinAsAdvertiserDescription": "Lancez des campagnes et payez aux performances. Créez des offres, validez les affiliés et suivez les conversions.",
+    "joinAsAffiliate": "Je suis affilié",
+    "joinAsAffiliateDescription": "Promouvez des offres et gagnez. Postulez aux programmes, obtenez des liens et soyez rémunéré pour le trafic que vous générez.",
+    "signInWithGoogle": "Continuer avec Google"
   }
 }
