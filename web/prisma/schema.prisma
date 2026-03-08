@@ -18,6 +18,11 @@ model User {
   accounts      Account[]
   sessions      Session[]
   telegrams     telegram[]
+  parentAccount String
+  advertisers   Advertiser[]
+  campaigns     Campaign[]
+  preferences   preferences[]
+
 
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
@@ -89,4 +94,32 @@ model telegram {
   token      String?  @db.VarChar(255)
   created_at DateTime @default(now()) @db.Timestamptz(6)
   updated_at DateTime @updatedAt
+}
+
+model Advertiser {
+  id         Int      @id @default(autoincrement())
+  name       String 
+  campaigns  Campaign[]
+  created_at DateTime @default(now()) @db.Timestamptz(6)
+  updated_at DateTime @updatedAt
+}
+
+model Campaign {
+  id            Int          @id @default(autoincrement())
+  name          String
+  advertiserId  Int
+  clickUrl      String?
+  clickTag      String?
+  advertiser    Advertisers  @relation(fields:[advertiserId], references[id])
+  created_at    DateTime     @default(now()) @db.Timestamptz(6)
+  updated_at    DateTime     @updatedAt
+}
+
+model Clicks {
+  id            Int          @id @default(autoincrement())
+  advertiserId  Int
+  campaignId    Int
+  affID         Int
+  created_at    DateTime     @default(now()) @db.Timestamptz(6)
+  updated_at    DateTime     @updatedAt
 }
