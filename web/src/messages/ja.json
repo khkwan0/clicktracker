@@ -1,6 +1,8 @@
 {
   "App": {
-    "name": "ClickTracker"
+    "name": "ClickTracker",
+    "themeSwitchToLight": "ライトテーマに切り替え",
+    "themeSwitchToDark": "ダークテーマに切り替え"
   },
   "HomePage": {
     "title": "ホーム"

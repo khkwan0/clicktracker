@@ -1,6 +1,8 @@
 {
   "App": {
-    "name": "ClickTracker"
+    "name": "ClickTracker",
+    "themeSwitchToLight": "切换到浅色主题",
+    "themeSwitchToDark": "切换到深色主题"
   },
   "HomePage": {
     "title": "首页"

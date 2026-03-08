@@ -1,6 +1,8 @@
 {
   "App": {
-    "name": "ClickTracker"
+    "name": "ClickTracker",
+    "themeSwitchToLight": "เปลี่ยนเป็นธีมสว่าง",
+    "themeSwitchToDark": "เปลี่ยนเป็นธีมมืด"
   },
   "HomePage": {
     "title": "หน้าแรก"

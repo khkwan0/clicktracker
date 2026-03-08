@@ -1,6 +1,8 @@
 {
   "App": {
-    "name": "ClickTracker"
+    "name": "ClickTracker",
+    "themeSwitchToLight": "Schakel naar licht thema",
+    "themeSwitchToDark": "Schakel naar donker thema"
   },
   "HomePage": {
     "title": "Startpagina"

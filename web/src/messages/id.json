@@ -1,6 +1,8 @@
 {
   "App": {
-    "name": "ClickTracker"
+    "name": "ClickTracker",
+    "themeSwitchToLight": "Beralih ke tema terang",
+    "themeSwitchToDark": "Beralih ke tema gelap"
   },
   "HomePage": {
     "title": "Halaman Utama"

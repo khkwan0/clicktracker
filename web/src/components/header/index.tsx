@@ -3,6 +3,7 @@
 import {useTranslations} from 'next-intl'
 import {Link} from '@/i18n/navigation'
 import {LanguageSwitcher} from '@/components/language-switcher'
+import {ThemeToggle} from '@/components/theme-toggle'
 
 export function Header() {
   const t = useTranslations('App')
@@ -16,7 +17,10 @@ export function Header() {
             className="min-w-0 truncate text-lg font-semibold text-foreground no-underline hover:opacity-80 sm:text-xl">
             {t('name')}
           </Link>
-          <LanguageSwitcher />
+          <div className="flex items-center gap-2">
+            <ThemeToggle />
+            <LanguageSwitcher />
+          </div>
         </div>
       </div>
     </header>
