@@ -25,6 +25,7 @@ export function Nav({session}: NavProps) {
 
   const dashboardPath = dashboardHref(role)
   const showCampaigns = hasRole(role, ROLE.ADVERTISER)
+  const showAffiliateOffers = hasRole(role, ROLE.AFFILIATE)
 
   const linkClass = (path: string) =>
     `rounded-md px-3 py-2 text-sm font-medium no-underline transition-colors ${
@@ -51,6 +52,19 @@ export function Nav({session}: NavProps) {
             </Link>
             <Link href="/adv/offers" className={linkClass('/adv/offers')}>
               {t('navOffers')}
+            </Link>
+          </>
+        )}
+        {showAffiliateOffers && (
+          <>
+            <Link href="/aff/active-offers" className={linkClass('/aff/active-offers')}>
+              {t('navActiveOffers')}
+            </Link>
+            <Link href="/aff/available-offers" className={linkClass('/aff/available-offers')}>
+              {t('navAvailableOffers')}
+            </Link>
+            <Link href="/aff/pending-offers" className={linkClass('/aff/pending-offers')}>
+              {t('navPendingOffers')}
             </Link>
           </>
         )}

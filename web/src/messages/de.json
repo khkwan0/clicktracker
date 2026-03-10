@@ -8,6 +8,10 @@
     "navDashboard": "Dashboard",
     "navCampaigns": "Kampagnen",
     "navAdvertisers": "Werbende",
+    "navOffers": "Angebote",
+    "navActiveOffers": "Aktive Angebote",
+    "navAvailableOffers": "Verfügbare Angebote",
+    "navPendingOffers": "Ausstehende Angebote",
     "navMore": "Mehr",
     "navTerms": "AGB",
     "navPrivacy": "Datenschutz",
@@ -127,6 +131,27 @@
     "section9Body": "Wir können diese AGB von Zeit zu Zeit aktualisieren. Fortgesetzte Nutzung der Plattform nach Änderungen gilt als Annahme. Wir werden angemessene Mittel nutzen, um Sie über wesentliche Änderungen zu informieren (z. B. E-Mail oder Hinweis auf der Plattform). Diese AGB unterliegen den Gesetzen der in unseren Richtlinien angegebenen Gerichtsbarkeit, unabhängig von kollisionsrechtlichen Grundsätzen.",
     "section10Title": "10. Kontakt",
     "section10Body": "Bei Fragen zu diesen AGB oder dem Affiliate-Netzwerk kontaktieren Sie uns bitte über die auf der Plattform oder in Ihren Kontoeinstellungen angegebenen Kontaktdaten."
+  },
+  "ActiveOffersPage": {
+    "title": "Aktive Angebote",
+    "subtitle": "Angebote, die Sie derzeit bewerben.",
+    "noOffers": "Keine aktiven Angebote."
+  },
+  "PendingOffersPage": {
+    "title": "Ausstehende Angebote",
+    "subtitle": "Angebote, die auf Genehmigung warten.",
+    "noOffers": "Keine ausstehenden Angebote."
+  },
+  "AvailableOffersPage": {
+    "title": "Verfügbare Angebote",
+    "subtitle": "Aktive Angebote von Werbetreibenden zum Bewerben durchsuchen.",
+    "advertiser": "Werbetreibender",
+    "campaign": "Kampagne",
+    "clickUrl": "Klick-URL",
+    "requiresApproval": "Genehmigung erforderlich",
+    "yes": "Ja",
+    "no": "Nein",
+    "noOffers": "Derzeit keine Angebote verfügbar. Schauen Sie später wieder vorbei."
   },
   "HomePage": {
     "title": "Startseite",

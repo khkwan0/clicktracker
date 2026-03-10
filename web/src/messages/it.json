@@ -9,6 +9,9 @@
     "navCampaigns": "Campagne",
     "navAdvertisers": "Inserzionisti",
     "navOffers": "Offerte",
+    "navActiveOffers": "Offerte attive",
+    "navAvailableOffers": "Offerte disponibili",
+    "navPendingOffers": "Offerte in attesa",
     "navMore": "Altro",
     "navTerms": "Termini",
     "navPrivacy": "Privacy",
@@ -170,6 +173,22 @@
     "deleted": "Campagna eliminata.",
     "error": "Si è verificato un errore."
   },
+  "DashboardPage": {
+    "title": "Dashboard",
+    "subtitle": "Panoramica delle tue offerte e campagne.",
+    "totalCampaigns": "Campagne totali",
+    "activeCampaigns": "Campagne attive",
+    "totalOffers": "Offerte totali",
+    "activeOffers": "Offerte attive",
+    "totalClicks": "Clic totali",
+    "clicksLast24h": "Clic (24h)",
+    "topCampaignsByClicks": "Campagne con più clic",
+    "topOffersByClicks": "Offerte con più clic",
+    "campaign": "Campagna",
+    "offer": "Offerta",
+    "clicks": "Clic",
+    "noData": "Nessun dato. Crea campagne e offerte per vedere le statistiche."
+  },
   "OffersPage": {
     "title": "Offerte",
     "subtitle": "Gestisci le tue offerte.",
@@ -200,6 +219,27 @@
     "filterByAdvertiser": "Filtra per inserzionista",
     "filterByCampaign": "Filtra per campagna",
     "filterAll": "Tutti"
+  },
+  "ActiveOffersPage": {
+    "title": "Offerte attive",
+    "subtitle": "Offerte che stai promuovendo.",
+    "noOffers": "Nessuna offerta attiva."
+  },
+  "PendingOffersPage": {
+    "title": "Offerte in attesa",
+    "subtitle": "Offerte in attesa di approvazione.",
+    "noOffers": "Nessuna offerta in attesa."
+  },
+  "AvailableOffersPage": {
+    "title": "Offerte disponibili",
+    "subtitle": "Sfoglia le offerte attive degli inserzionisti da promuovere.",
+    "advertiser": "Inserzionista",
+    "campaign": "Campagna",
+    "clickUrl": "URL clic",
+    "requiresApproval": "Richiede approvazione",
+    "yes": "Sì",
+    "no": "No",
+    "noOffers": "Nessuna offerta disponibile al momento. Riprova più tardi."
   },
   "HomePage": {
     "title": "Pagina principale",

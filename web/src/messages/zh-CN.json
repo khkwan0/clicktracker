@@ -8,6 +8,10 @@
     "navDashboard": "仪表盘",
     "navCampaigns": "广告活动",
     "navAdvertisers": "广告主",
+    "navOffers": "报价",
+    "navActiveOffers": "进行中的报价",
+    "navAvailableOffers": "可申请报价",
+    "navPendingOffers": "待处理报价",
     "navMore": "更多",
     "navTerms": "条款",
     "navPrivacy": "隐私",
@@ -127,6 +131,27 @@
     "section9Body": "我们可能不时更新本条款。变更后继续使用平台即视为接受。我们将以合理方式通知您重大变更（如电子邮件或站内通知）。本条款受我们政策中指定的司法辖区法律管辖，不适用法律冲突原则。",
     "section10Title": "10. 联系我们",
     "section10Body": "有关本条款与条件或联盟网络的问题，请通过平台或账户设置中提供的联系方式与我们联系。"
+  },
+  "ActiveOffersPage": {
+    "title": "进行中的报价",
+    "subtitle": "您正在推广的报价。",
+    "noOffers": "暂无进行中的报价。"
+  },
+  "PendingOffersPage": {
+    "title": "待处理报价",
+    "subtitle": "等待审核的报价。",
+    "noOffers": "暂无待处理报价。"
+  },
+  "AvailableOffersPage": {
+    "title": "可用广告活动",
+    "subtitle": "浏览广告主的活跃广告活动以供推广。",
+    "advertiser": "广告主",
+    "campaign": "广告活动",
+    "clickUrl": "点击链接",
+    "requiresApproval": "需经批准",
+    "yes": "是",
+    "no": "否",
+    "noOffers": "暂无可用广告活动。请稍后再查看。"
   },
   "HomePage": {
     "title": "首页",

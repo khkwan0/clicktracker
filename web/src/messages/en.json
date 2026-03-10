@@ -17,6 +17,9 @@
     "navCampaigns": "Campaigns",
     "navAdvertisers": "Advertisers",
     "navOffers": "Offers",
+    "navActiveOffers": "Active offers",
+    "navAvailableOffers": "Available offers",
+    "navPendingOffers": "Pending offers",
     "navMore": "More",
     "navTerms": "Terms",
     "navPrivacy": "Privacy",
@@ -186,6 +189,22 @@
     "deleted": "Campaign deleted.",
     "error": "Something went wrong."
   },
+  "DashboardPage": {
+    "title": "Dashboard",
+    "subtitle": "Overview of your offers and campaigns.",
+    "totalCampaigns": "Total campaigns",
+    "activeCampaigns": "Active campaigns",
+    "totalOffers": "Total offers",
+    "activeOffers": "Active offers",
+    "totalClicks": "Total clicks",
+    "clicksLast24h": "Clicks (24h)",
+    "topCampaignsByClicks": "Top campaigns by clicks",
+    "topOffersByClicks": "Top offers by clicks",
+    "campaign": "Campaign",
+    "offer": "Offer",
+    "clicks": "Clicks",
+    "noData": "No data yet. Create campaigns and offers to see stats."
+  },
   "OffersPage": {
     "title": "Offers",
     "subtitle": "Manage your offers.",
@@ -216,6 +235,27 @@
     "filterByAdvertiser": "Filter by advertiser",
     "filterByCampaign": "Filter by campaign",
     "filterAll": "All"
+  },
+  "ActiveOffersPage": {
+    "title": "Active offers",
+    "subtitle": "Offers you are currently promoting.",
+    "noOffers": "No active offers."
+  },
+  "PendingOffersPage": {
+    "title": "Pending offers",
+    "subtitle": "Offers awaiting approval.",
+    "noOffers": "No pending offers."
+  },
+  "AvailableOffersPage": {
+    "title": "Available offers",
+    "subtitle": "Browse active offers from advertisers to promote.",
+    "advertiser": "Advertiser",
+    "campaign": "Campaign",
+    "clickUrl": "Click URL",
+    "requiresApproval": "Requires approval",
+    "yes": "Yes",
+    "no": "No",
+    "noOffers": "No offers available at the moment. Check back later."
   },
   "HomePage": {
     "title": "Home Page",

@@ -8,6 +8,10 @@
     "navDashboard": "Dasbor",
     "navCampaigns": "Kampanye",
     "navAdvertisers": "Pengiklan",
+    "navOffers": "Penawaran",
+    "navActiveOffers": "Penawaran aktif",
+    "navAvailableOffers": "Penawaran tersedia",
+    "navPendingOffers": "Penawaran tertunda",
     "navMore": "Lainnya",
     "navTerms": "Ketentuan",
     "navPrivacy": "Privasi",
@@ -127,6 +131,27 @@
     "section9Body": "Kami dapat memperbarui Syarat ini dari waktu ke waktu. Penggunaan Platform yang berkelanjutan setelah perubahan merupakan penerimaan. Kami akan menggunakan cara yang wajar untuk memberi tahu Anda tentang perubahan material (mis. email atau pemberitahuan di platform). Syarat ini diatur oleh hukum yurisdiksi yang ditentukan dalam kebijakan kami, tanpa memandang prinsip konflik hukum.",
     "section10Title": "10. Kontak",
     "section10Body": "Untuk pertanyaan tentang Syarat dan Ketentuan ini atau jaringan afiliasi, silakan hubungi kami melalui informasi kontak yang tersedia di Platform atau di pengaturan akun Anda."
+  },
+  "ActiveOffersPage": {
+    "title": "Penawaran aktif",
+    "subtitle": "Penawaran yang saat ini Anda promosikan.",
+    "noOffers": "Tidak ada penawaran aktif."
+  },
+  "PendingOffersPage": {
+    "title": "Penawaran tertunda",
+    "subtitle": "Penawaran yang menunggu persetujuan.",
+    "noOffers": "Tidak ada penawaran tertunda."
+  },
+  "AvailableOffersPage": {
+    "title": "Penawaran tersedia",
+    "subtitle": "Jelajahi penawaran aktif dari pengiklan untuk dipromosikan.",
+    "advertiser": "Pengiklan",
+    "campaign": "Kampanye",
+    "clickUrl": "URL klik",
+    "requiresApproval": "Perlu persetujuan",
+    "yes": "Ya",
+    "no": "Tidak",
+    "noOffers": "Tidak ada penawaran tersedia saat ini. Silakan cek lagi nanti."
   },
   "HomePage": {
     "title": "Halaman Utama",

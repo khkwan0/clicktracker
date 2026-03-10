@@ -8,6 +8,10 @@
     "navDashboard": "Tableau de bord",
     "navCampaigns": "Campagnes",
     "navAdvertisers": "Annonceurs",
+    "navOffers": "Offres",
+    "navActiveOffers": "Offres actives",
+    "navAvailableOffers": "Offres disponibles",
+    "navPendingOffers": "Offres en attente",
     "navMore": "Plus",
     "navTerms": "CGU",
     "navPrivacy": "Confidentialité",
@@ -127,6 +131,27 @@
     "section9Body": "Nous pouvons mettre à jour ces Conditions de temps à autre. L'utilisation continue de la Plateforme après modification vaut acceptation. Nous utiliserons des moyens raisonnables pour vous informer des changements importants (ex. e-mail ou notification sur la plateforme). Ces Conditions sont régies par les lois de la juridiction précisée dans nos politiques, sans égard aux principes de conflit de lois.",
     "section10Title": "10. Contact",
     "section10Body": "Pour toute question concernant ces Conditions générales ou le réseau d'affiliation, veuillez nous contacter via les coordonnées indiquées sur la Plateforme ou dans les paramètres de votre compte."
+  },
+  "ActiveOffersPage": {
+    "title": "Offres actives",
+    "subtitle": "Offres que vous promevez actuellement.",
+    "noOffers": "Aucune offre active."
+  },
+  "PendingOffersPage": {
+    "title": "Offres en attente",
+    "subtitle": "Offres en attente d'approbation.",
+    "noOffers": "Aucune offre en attente."
+  },
+  "AvailableOffersPage": {
+    "title": "Offres disponibles",
+    "subtitle": "Parcourez les offres actives des annonceurs à promouvoir.",
+    "advertiser": "Annonceur",
+    "campaign": "Campagne",
+    "clickUrl": "URL de clic",
+    "requiresApproval": "Approvation requise",
+    "yes": "Oui",
+    "no": "Non",
+    "noOffers": "Aucune offre disponible pour le moment. Revenez plus tard."
   },
   "HomePage": {
     "title": "Page d'accueil",

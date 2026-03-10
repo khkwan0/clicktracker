@@ -8,6 +8,10 @@
     "navDashboard": "ダッシュボード",
     "navCampaigns": "キャンペーン",
     "navAdvertisers": "広告主",
+    "navOffers": "オファー",
+    "navActiveOffers": "アクティブなオファー",
+    "navAvailableOffers": "利用可能なオファー",
+    "navPendingOffers": "保留中のオファー",
     "navMore": "その他",
     "navTerms": "利用規約",
     "navPrivacy": "プライバシー",
@@ -127,6 +131,27 @@
     "section9Body": "本規約は随時更新される場合があります。変更後のプラットフォームの継続利用は、変更の受諾とみなされます。重要な変更については、合理的な方法（メールまたはプラットフォーム内通知等）でお知らせします。本規約は、当社ポリシーで指定された管轄区域の法律に準拠し、法の抵触の原則は適用しません。",
     "section10Title": "10. お問い合わせ",
     "section10Body": "本利用規約またはアフィリエイトネットワークに関するご質問は、プラットフォームまたはアカウント設定に記載の連絡先よりお問い合わせください。"
+  },
+  "ActiveOffersPage": {
+    "title": "アクティブなオファー",
+    "subtitle": "現在プロモーション中のオファーです。",
+    "noOffers": "アクティブなオファーはありません。"
+  },
+  "PendingOffersPage": {
+    "title": "保留中のオファー",
+    "subtitle": "承認待ちのオファーです。",
+    "noOffers": "保留中のオファーはありません。"
+  },
+  "AvailableOffersPage": {
+    "title": "利用可能なオファー",
+    "subtitle": "広告主のアクティブなオファーを閲覧してプロモーションできます。",
+    "advertiser": "広告主",
+    "campaign": "キャンペーン",
+    "clickUrl": "クリックURL",
+    "requiresApproval": "承認が必要",
+    "yes": "はい",
+    "no": "いいえ",
+    "noOffers": "現在利用可能なオファーはありません。後でもう一度ご確認ください。"
   },
   "HomePage": {
     "title": "ホーム",

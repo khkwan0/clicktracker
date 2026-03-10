@@ -8,6 +8,10 @@
     "navDashboard": "Dashboard",
     "navCampaigns": "Campagnes",
     "navAdvertisers": "Adverteerders",
+    "navOffers": "Aanbiedingen",
+    "navActiveOffers": "Actieve aanbiedingen",
+    "navAvailableOffers": "Beschikbare aanbiedingen",
+    "navPendingOffers": "Aanbiedingen in afwachting",
     "navMore": "Meer",
     "navTerms": "Voorwaarden",
     "navPrivacy": "Privacy",
@@ -127,6 +131,27 @@
     "section9Body": "We kunnen deze Voorwaarden van tijd tot tijd bijwerken. Voortgezet gebruik van het Platform na wijzigingen geldt als acceptatie. We zullen redelijke middelen gebruiken om je op de hoogte te stellen van materiële wijzigingen (bijv. e-mail of melding op het platform). Deze Voorwaarden worden beheerst door de wetten van de in ons beleid genoemde rechtsmacht, ongeacht beginselen van conflicterend recht.",
     "section10Title": "10. Contact",
     "section10Body": "Voor vragen over deze Algemene voorwaarden of het affiliate-netwerk, neem contact met ons op via de contactgegevens op het Platform of in je accountinstellingen."
+  },
+  "ActiveOffersPage": {
+    "title": "Actieve aanbiedingen",
+    "subtitle": "Aanbiedingen die je momenteel promoot.",
+    "noOffers": "Geen actieve aanbiedingen."
+  },
+  "PendingOffersPage": {
+    "title": "Aanbiedingen in afwachting",
+    "subtitle": "Aanbiedingen die wachten op goedkeuring.",
+    "noOffers": "Geen aanbiedingen in afwachting."
+  },
+  "AvailableOffersPage": {
+    "title": "Beschikbare aanbiedingen",
+    "subtitle": "Bekijk actieve aanbiedingen van adverteerders om te promoten.",
+    "advertiser": "Adverteerder",
+    "campaign": "Campagne",
+    "clickUrl": "Klik-URL",
+    "requiresApproval": "Goedkeuring vereist",
+    "yes": "Ja",
+    "no": "Nee",
+    "noOffers": "Er zijn momenteel geen aanbiedingen beschikbaar. Kom later terug."
   },
   "HomePage": {
     "title": "Startpagina",

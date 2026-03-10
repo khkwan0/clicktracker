@@ -139,12 +139,29 @@ model Affiliate {
   updated_at    DateTime     @updatedAt
 }
 
+model Offer {
+  id                String       @id @default(cuid())
+  campaignId        String
+  advertiserId      String
+  clickUrl          String
+  isActive          Boolean      @default(true)
+  requiresApproval  Boolean      @default(false)
+  clicks            Click[]
+  advertiser        Advertiser   @relation(fields:[advertiserId], references:[id])
+  campaign          Campaign     @relation(fields:[campaignId], references:[id])
+  created_at        DateTime     @default(now()) @db.Timestamptz(6)
+  updated_at        DateTime     @updatedAt
+
+}
+
 model Click {
   id            Int          @id @default(autoincrement())
   advertiserId  String
   campaignId    String
+  offerId       String
   affiliateId   String
   userId        String
+  offer         Offer        @relation(fields:[offerId], references:[id])
   affilitate    Affiliate    @relation(fields:[affiliateId], references:[id])
   advertiser    Advertiser   @relation(fields:[advertiserId], references:[id])
   campaign      Campaign     @relation(fields:[campaignId], references:[id])
@@ -153,16 +170,21 @@ model Click {
   updated_at    DateTime     @updatedAt
 }
 
-model Offer {
-  id                Int          @id @default(autoincrement())
-  campaignId        String
-  advertiserId      String
-  clickUrl          String
-  isActive          Boolean      @default(true)
-  requiresApproval  Boolean      @default(false)
-  advertiser        Advertiser   @relation(fields:[advertiserId], references:[id])
-  campaign          Campaign     @relation(fields:[campaignId], references:[id])
-  created_at        DateTime     @default(now()) @db.Timestamptz(6)
-  updated_at        DateTime     @updatedAt
+model Unapproved {
+  id            Int           @id @default(autoincrement())
+  offerId       String
+  affiliateId   String
+  affiliate     Affilite     @relation(fields:[affiliateId], references:[id])
+  created_at    DateTime     @default(now()) @db.Timestamptz(6)
+  updated_at    DateTime     @updatedAt
+}
 
+model Affiliate_Offers {
+  id            Int           @id @default(autoincrement())
+  affiliateId   String
+  offerId       String
+  clicks        Int
+  isActive      Boolean       @default(true)
+  offer         Offer         @relation(fields:[offerId], references:[id])
+  affiliate     Affiliate     @relation(fields:[affiliateId], references:[id])
 }

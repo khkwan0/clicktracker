@@ -8,6 +8,10 @@
     "navDashboard": "Panel de control",
     "navCampaigns": "Campañas",
     "navAdvertisers": "Anunciantes",
+    "navOffers": "Ofertas",
+    "navActiveOffers": "Ofertas activas",
+    "navAvailableOffers": "Ofertas disponibles",
+    "navPendingOffers": "Ofertas pendientes",
     "navMore": "Más",
     "navTerms": "Términos",
     "navPrivacy": "Privacidad",
@@ -127,6 +131,27 @@
     "section9Body": "Podemos actualizar estos Términos periódicamente. El uso continuado de la Plataforma tras los cambios constituye aceptación. Usaremos medios razonables para notificarte cambios importantes (p. ej. correo o aviso en la plataforma). Estos Términos se rigen por las leyes de la jurisdicción especificada en nuestras políticas, sin tener en cuenta principios de conflicto de leyes.",
     "section10Title": "10. Contacto",
     "section10Body": "Para preguntas sobre estos Términos y condiciones o la red de afiliados, contáctanos a través de la información de contacto indicada en la Plataforma o en la configuración de tu cuenta."
+  },
+  "ActiveOffersPage": {
+    "title": "Ofertas activas",
+    "subtitle": "Ofertas que estás promocionando actualmente.",
+    "noOffers": "No hay ofertas activas."
+  },
+  "PendingOffersPage": {
+    "title": "Ofertas pendientes",
+    "subtitle": "Ofertas en espera de aprobación.",
+    "noOffers": "No hay ofertas pendientes."
+  },
+  "AvailableOffersPage": {
+    "title": "Ofertas disponibles",
+    "subtitle": "Explora las ofertas activas de anunciantes para promocionar.",
+    "advertiser": "Anunciante",
+    "campaign": "Campaña",
+    "clickUrl": "URL de clic",
+    "requiresApproval": "Requiere aprobación",
+    "yes": "Sí",
+    "no": "No",
+    "noOffers": "No hay ofertas disponibles en este momento. Vuelve más tarde."
   },
   "HomePage": {
     "title": "Página principal",

@@ -8,6 +8,10 @@
     "navDashboard": "儀表板",
     "navCampaigns": "廣告活動",
     "navAdvertisers": "廣告主",
+    "navOffers": "報價",
+    "navActiveOffers": "進行中的報價",
+    "navAvailableOffers": "可申請報價",
+    "navPendingOffers": "待處理報價",
     "navMore": "更多",
     "navTerms": "條款",
     "navPrivacy": "隱私",
@@ -127,6 +131,27 @@
     "section9Body": "我們得不時更新本條款。變更後繼續使用平台即視為接受。我們將以合理方式通知您重大變更（如電子郵件或站內通知）。本條款受我們政策中指定之管轄法律約束，不適用法律衝突原則。",
     "section10Title": "10. 聯絡我們",
     "section10Body": "有關本條款與條件或聯盟網路的問題，請透過平台或帳戶設定中提供的聯絡方式與我們聯絡。"
+  },
+  "ActiveOffersPage": {
+    "title": "進行中的報價",
+    "subtitle": "您正在推廣的報價。",
+    "noOffers": "暫無進行中的報價。"
+  },
+  "PendingOffersPage": {
+    "title": "待處理報價",
+    "subtitle": "等待審核的報價。",
+    "noOffers": "暫無待處理報價。"
+  },
+  "AvailableOffersPage": {
+    "title": "可用廣告活動",
+    "subtitle": "瀏覽廣告主的活躍廣告活動以供推廣。",
+    "advertiser": "廣告主",
+    "campaign": "廣告活動",
+    "clickUrl": "點擊連結",
+    "requiresApproval": "需經批准",
+    "yes": "是",
+    "no": "否",
+    "noOffers": "暫無可用廣告活動。請稍後再查看。"
   },
   "HomePage": {
     "title": "首頁",
