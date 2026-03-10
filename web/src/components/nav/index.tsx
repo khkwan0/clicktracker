@@ -42,9 +42,17 @@ export function Nav({session}: NavProps) {
           {t('navDashboard')}
         </Link>
         {showCampaigns && (
-          <Link href="/adv/campaigns" className={linkClass('/adv/campaigns')}>
-            {t('navCampaigns')}
-          </Link>
+          <>
+            <Link href="/adv/advertisers" className={linkClass('/adv/advertisers')}>
+              {t('navAdvertisers')}
+            </Link>
+            <Link href="/adv/campaigns" className={linkClass('/adv/campaigns')}>
+              {t('navCampaigns')}
+            </Link>
+            <Link href="/adv/offers" className={linkClass('/adv/offers')}>
+              {t('navOffers')}
+            </Link>
+          </>
         )}
       </nav>
     </div>

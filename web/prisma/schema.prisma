@@ -15,10 +15,10 @@ model User {
   isActive      Boolean         @default(true)
   isAdmin       Boolean         @default(false)
   role          Int             @default(0)
+  parentAccount String?
   accounts      Account[]
   sessions      Session[]
   telegrams     telegram[]
-  parentAccount String
   advertisers   Advertiser[]
   campaigns     Campaign[]
   preferences   preferences[]
@@ -104,24 +104,28 @@ model Advertiser {
   userId     String
   name       String 
   user       User            @relation(fields:[userId], references:[id])
-  clicks        Click[]
+  isActive   Boolean         @default(true)
+  clicks     Click[]
+  offers            Offer[]
   campaigns  Campaign[]
   created_at DateTime        @default(now()) @db.Timestamptz(6)
   updated_at DateTime        @updatedAt
 }
 
 model Campaign {
-  id            String      @id @default(cuid())
-  name          String
-  userId        String
-  advertiserId  String
-  clickUrl      String?
-  clickTag      String?
-  clicks        Click[]
-  user          User         @relation(fields:[userId], references:[id])
-  advertiser    Advertiser   @relation(fields:[advertiserId], references:[id])
-  created_at    DateTime     @default(now()) @db.Timestamptz(6)
-  updated_at    DateTime     @updatedAt
+  id                String      @id @default(cuid())
+  name              String
+  userId            String
+  advertiserId      String
+  clickUrl          String?
+  clickTag          String?
+  clicks            Click[]
+  offers            Offer[]
+  isActive          Boolean      @default(true)
+  user              User         @relation(fields:[userId], references:[id])
+  advertiser        Advertiser   @relation(fields:[advertiserId], references:[id])
+  created_at        DateTime     @default(now()) @db.Timestamptz(6)
+  updated_at        DateTime     @updatedAt
 }
 
 model Affiliate {
@@ -129,6 +133,7 @@ model Affiliate {
   name          String
   userId        String
   user          User         @relation(fields:[userId], references:[id])
+  isActive      Boolean      @default(true)
   clicks        Click[]
   created_at    DateTime     @default(now()) @db.Timestamptz(6)
   updated_at    DateTime     @updatedAt
@@ -146,4 +151,18 @@ model Click {
   user          User         @relation(fields:[userId], references:[id])
   created_at    DateTime     @default(now()) @db.Timestamptz(6)
   updated_at    DateTime     @updatedAt
+}
+
+model Offer {
+  id                Int          @id @default(autoincrement())
+  campaignId        String
+  advertiserId      String
+  clickUrl          String
+  isActive          Boolean      @default(true)
+  requiresApproval  Boolean      @default(false)
+  advertiser        Advertiser   @relation(fields:[advertiserId], references:[id])
+  campaign          Campaign     @relation(fields:[campaignId], references:[id])
+  created_at        DateTime     @default(now()) @db.Timestamptz(6)
+  updated_at        DateTime     @updatedAt
+
 }

@@ -1,3 +1,4 @@
+import type {Prisma} from '@prisma/client'
 import {auth} from '@/auth'
 import {prisma} from '@/lib/prisma'
 import {ROLE} from '@/lib/roles'
@@ -17,11 +18,20 @@ async function setOnboardingRole(formData: FormData) {
   const session = await auth()
   if (!session?.user?.id) redirect(`/${locale}/auth`)
   if (!VALID_ROLES.includes(roleValue)) return
-  await prisma.user.update({
-    where: {id: session.user.id},
-    data: {role: roleValue},
-  })
-  redirect(`/${locale}/dashboard`)
+  try {
+    await prisma.user.update({
+      where: {id: session.user.id},
+      data: {role: roleValue} as Prisma.UserUpdateInput,
+    })
+    if (roleValue === ROLE.ADVERTISER) {
+      redirect(`/${locale}/adv/dashboard`)
+    }
+    if (roleValue === ROLE.AFFILIATE) {
+      redirect(`/${locale}/aff/dashboard`)
+    }
+  } catch (error) {
+    console.error(error)
+  }
 }
 
 export default async function OnboardingPage({params}: Props) {
@@ -43,9 +53,10 @@ export default async function OnboardingPage({params}: Props) {
           <input type="hidden" name="locale" value={locale} />
           <button
             type="submit"
-            className="flex w-full flex-col items-start rounded-xl border border-foreground/15 bg-background p-6 text-left shadow-sm transition hover:border-foreground/25 hover:bg-foreground/5 focus:outline-none focus:ring-2 focus:ring-foreground/20"
-          >
-            <span className="font-medium text-foreground">{t('advertiser')}</span>
+            className="flex w-full flex-col items-start rounded-xl border border-foreground/15 bg-background p-6 text-left shadow-sm transition hover:border-foreground/25 hover:bg-foreground/5 focus:outline-none focus:ring-2 focus:ring-foreground/20">
+            <span className="font-medium text-foreground">
+              {t('advertiser')}
+            </span>
             <span className="mt-1 text-sm text-foreground/70">
               {t('advertiserDescription')}
             </span>
@@ -56,9 +67,10 @@ export default async function OnboardingPage({params}: Props) {
           <input type="hidden" name="locale" value={locale} />
           <button
             type="submit"
-            className="flex w-full flex-col items-start rounded-xl border border-foreground/15 bg-background p-6 text-left shadow-sm transition hover:border-foreground/25 hover:bg-foreground/5 focus:outline-none focus:ring-2 focus:ring-foreground/20"
-          >
-            <span className="font-medium text-foreground">{t('affiliate')}</span>
+            className="flex w-full flex-col items-start rounded-xl border border-foreground/15 bg-background p-6 text-left shadow-sm transition hover:border-foreground/25 hover:bg-foreground/5 focus:outline-none focus:ring-2 focus:ring-foreground/20">
+            <span className="font-medium text-foreground">
+              {t('affiliate')}
+            </span>
             <span className="mt-1 text-sm text-foreground/70">
               {t('affiliateDescription')}
             </span>
