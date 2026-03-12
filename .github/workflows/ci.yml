@@ -17,13 +17,22 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Setup bun
-        uses: oven-sh/setup-bun
+      - name: Setup Bun
+        uses: oven-sh/setup-bun@v2 # Added @v2 to fix your error
         with:
           bun-version: latest
 
+      # Add this block for automatic caching
+      - name: Cache Bun dependencies
+        uses: actions/cache@v4
+        with:
+          path: ~/.bun/install/cache
+          key: ${{ runner.os }}-bun-${{ hashFiles('web/bun.lockb') }}
+          restore-keys: |
+            ${{ runner.os }}-bun-
+
       - name: Install dependencies
-        run: bun install
+        run: bun install --frozen-lockfile
 
       - name: Lint
         run: bun run lint .
@@ -36,7 +45,6 @@ jobs:
       - name: Security audit
         run: bun audit --audit-level=high
         continue-on-error: true
-
   api:
     name: API (build, vet)
     runs-on: ubuntu-latest
