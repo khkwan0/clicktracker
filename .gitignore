@@ -44,3 +44,6 @@ postgres_data/
 pgadmin/
 api_logs/
 assets/
+.cursor/
+agency-agents/
+*.swp

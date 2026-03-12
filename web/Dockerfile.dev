@@ -1,0 +1,6 @@
+# Development: keep container running so host can run dev server with source mounted.
+FROM oven/bun
+
+WORKDIR /usr/src/app
+
+CMD ["tail", "-f", "/dev/null"]

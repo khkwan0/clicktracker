@@ -1,16 +1,18 @@
+# Production-like compose: no source mounts, healthchecks, NODE_ENV=production.
+# Run with: docker compose -f docker-compose.prod.yml up -d
+
 services:
   web:
     restart: always
-    user: '1000:1000'
-    build:
-      context: ./web
-      dockerfile: Dockerfile.dev
+    build: ./web
+    image: clicktracker-web:latest
     ports:
       - 33128:3000
     env_file:
       - ./web/.env
+    environment:
+      - NODE_ENV=production
     volumes:
-      - ./web:/usr/src/app
       - ./assets:/usr/src/app/assets
       - ./api_logs:/usr/src/app/logs
     networks:
@@ -21,17 +23,18 @@ services:
       timeout: 10s
       retries: 3
       start_period: 40s
+
   api:
     restart: always
     build: ./api
+    image: clicktracker-api:latest
     ports:
       - 33124:3000
     env_file:
       - ./api/.env
     volumes:
-#      - ./api:/usr/src/app
-      - ./assets:/usr/src/app/assets
-      - ./api_logs:/usr/src/app/logs
+      - ./assets:/app/assets
+      - ./api_logs:/app/logs
     networks:
       - internal_clicktracker_net
     healthcheck:
@@ -40,6 +43,7 @@ services:
       timeout: 10s
       retries: 3
       start_period: 10s
+
   redis:
     restart: always
     image: redis/redis-stack
@@ -47,6 +51,7 @@ services:
       - ./redis:/data
     networks:
       - internal_clicktracker_net
+
   postgres:
     user: '1000:1000'
     restart: always
@@ -57,6 +62,7 @@ services:
       - ./web/.env
     networks:
       - internal_clicktracker_net
+
   pgadmin:
     restart: always
     image: dpage/pgadmin4:latest

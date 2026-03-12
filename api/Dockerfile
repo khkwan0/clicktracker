@@ -1,14 +1,23 @@
-FROM ubuntu:latest
+# Stage 1: build
+FROM golang:1.23-alpine AS builder
 
-ADD https://go.dev/dl/go1.26.1.linux-amd64.tar.gz /tmp
-RUN rm -rf /usr/local/go
-RUN tar -C /usr/local -xzf /tmp/go1.26.1.linux-amd64.tar.gz
-
-ENV PATH="/usr/local/go/bin:${PATH}"
-
-COPY . /usr/src/app
 WORKDIR /usr/src/app
 
-RUN go build -o main main.go
+COPY go.mod go.sum ./
+RUN go mod download
 
-CMD ./main
+COPY . .
+RUN CGO_ENABLED=0 go build -o main .
+
+# Stage 2: minimal runtime
+FROM alpine:3.20
+
+RUN apk add --no-cache ca-certificates wget
+
+WORKDIR /app
+
+COPY --from=builder /usr/src/app/main .
+
+EXPOSE 3000
+
+CMD ["./main", "-port", "3000"]
