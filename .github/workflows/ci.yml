@@ -17,25 +17,24 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
+      - name: Setup bun
+        uses: oven-sh/setup-bun
         with:
-          node-version: '20'
-          cache: 'npm'
+          bun-version: latest
 
       - name: Install dependencies
-        run: npm install
+        run: bun install
 
       - name: Lint
-        run: npm run lint .
+        run: bun run lint .
 
       - name: Build
-        run: npm run build
+        run: bun run build
         env:
           SKIP_ENV_VALIDATION: 1
 
       - name: Security audit
-        run: npm audit --audit-level=high
+        run: bun audit --audit-level=high
         continue-on-error: true
 
   api:
