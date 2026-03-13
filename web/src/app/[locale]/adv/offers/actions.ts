@@ -47,7 +47,7 @@ export async function createOffer(
 }
 
 export async function updateOffer(
-  id: number,
+  id: string,
   data: OfferInput,
   locale?: string
 ): Promise<{ok: boolean; error?: string}> {
@@ -83,7 +83,7 @@ export async function updateOffer(
 
 /** Deactivate offer (set isActive false); does not delete from database. */
 export async function deactivateOffer(
-  id: number,
+  id: string,
   locale?: string
 ): Promise<{ok: boolean; error?: string}> {
   try {
